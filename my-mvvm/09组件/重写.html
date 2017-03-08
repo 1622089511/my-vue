@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="app">
+			<input v-model="parentMessage" />
+			<child :my-message=" parentMessage "></child>	
+		</div>
+	<script src="../vue.js"></script>	
+	<script>
+		Vue.component('child',{
+			props: [ 'myMessage' ],
+			template: '   <span>{{ myMessage }}</span>	'
+		})
+		new Vue({
+			el: '#app',
+			data:{
+				parentMessage: ' recode '
+			}
+		})
+		
+	</script>
+	</body>
+</html>

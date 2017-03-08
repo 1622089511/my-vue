@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ex">
+			
+			<select v-model="selected">
+				<option v-bind:value="{ number : 123 }">123</option>
+				<option v-bind:value="{ number : 456 }">456</option>
+				<option v-bind:value="{ number : 457 }">457</option>
+				<option v-bind:value="{ number : 458 }">458</option>
+				<option v-bind:value="{ number : 789 }"></option>
+			</select>
+			<pre> {{ $data }}</pre>
+			
+		</div>
+		
+		
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		new Vue({
+			el : '#ex',
+			data:{
+				selected: ' ',
+				
+			}
+		})
+		
+		
+		
+		
+	</script>
+		
+	</body>
+</html>

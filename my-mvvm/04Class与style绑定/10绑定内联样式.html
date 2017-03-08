@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--一般绑定-->
+		<div id="v1" v-bind:style="{color:activeColor , fontSize:fontSize + 'px'}">myVue</div>
+		
+		<!--对象绑定-->
+		<div id="v2" v-bind:style="styleObject">myVue2</div>	
+		<!--同样的，对象语法常常结合返回对象的计算属性使用。-->
+		
+		<!--数组语法-->
+		<div id="v3" v-bind:style="[baseStyles,overridingStyle]">asd</div>
+		
+		<!--自动加前缀-->
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Vue({
+			el : '#v1',
+			data:{
+				activeColor: 'red',
+				fontSize: 30
+			}
+		})
+		
+		new Vue({
+			el: '#v2',
+			data:{
+				styleObject:{
+					color: 'red',
+					fontSize: '20px'
+				}
+			}	
+		})		
+		
+		new Vue({
+			el:'#v3',
+			data:{
+				baseStyles: {
+					fontSize: '20em',
+					color: 'red'
+				},
+				overridingStyle:{
+					border:'1px solid red'
+				}
+			}
+		})
+		
+		
+	</script>
+	</body>
+</html>

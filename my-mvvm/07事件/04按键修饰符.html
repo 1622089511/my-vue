@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+
+		<input v-on:keyup.13="submit" />
+		<input v-on:keyup.enter="submit" />
+		<input @keyup.enter = "submit" />
+		常用的按键：
+			.tab                   .space
+ 			.delete 				.esc
+		上下左右
+			.up    .down   .left   .right
+  		前面只要配合key事件
+  		2.1新增 
+  			.ctrl   .alt    .shift   .meta		
+  		
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+	//	也可以通过全局config来设置自定义
+			Vue.config.keyCodes={
+				v: 86,
+				f1:112,
+				mediaPlayPause: 179,
+				up:[38,87]
+			}	
+	</script>	
+
+	</body>
+</html>

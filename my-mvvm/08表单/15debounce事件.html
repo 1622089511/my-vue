@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ex">
+			<input  v-model="msg" @keyup="onkeyup"/>{{msg}}
+			<br />
+			<input  v-model="msg1"/>
+			{{msg1}}
+			<br />
+			<pre> {{ $data | json }}</pre>
+			
+		</div>
+		
+		
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		new Vue({
+			el: '#ex',
+			data: {
+				msg:'',
+				msg1:'',
+				msgkeyup: 1
+			},
+			methods:{
+				onkeyup:function(){
+					this.msgkeyup = this.msgkeyup + 1 ;
+				}
+			}
+			
+		})
+		
+		
+	</script>
+	</body>
+</html>

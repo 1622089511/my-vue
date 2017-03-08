@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+	//	var vm = new Vue({}) //创建构造器
+		
+	//	var MyComponent = Vue.extend({
+	//	})					//扩展选项
+		
+	//	var myComponentInstance = new MyComponent()
+							//将所有mycomponent实例以预定义的扩展选项被创建
+		//属性和方法
+		var data = {a:1}
+		var vm =new Vue({
+			data:data
+		})
+		vm.a === data.a; //-true
+		vm.a=2;
+		data.a;
+		
+		
+	</script>
+	</body>
+</html>

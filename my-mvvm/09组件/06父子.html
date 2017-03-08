@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+				<child   id="pr" message="hello!"></child>
+	<script src="../vue.js"></script>
+	<script>
+		//注册子组件
+		Vue.component('child',{
+			props: ['message'],													//讲msg数据传递
+			template: '<span> {{ message  }}</span>'				//模板直接传递
+		})
+		new Vue({
+		 			el : '#pr'
+		 })
+	
+		
+	</script>
+	</body>
+</html>

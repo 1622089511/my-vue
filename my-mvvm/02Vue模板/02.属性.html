@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div v-bind:id="dynamicID"></div>
+		
+		<button v-bind:disabled="someDynamicCondition">Button</button>
+		
+		<button v-bind:disabled="someDynamicCondition">Button</button>
+		
+	<!--使用js表达式-->	
+		{{ num + 1 }}
+		{{ ok? 'yes':'no'}}
+		{{ message.split('').reverse.join('') }}
+		<div v-bind:id=" 'list-'+id "></div>  
+	<!--限制及错误-->
+		
+		{{ var a=1 }} 这是语句不是表达式
+		{{ if(ok){return message} }} 控制流不会生效，请使用三次元表达式
+		{{ ok? return message}}
+		
+		<!--不应在模板中访问用户定义的全局变量-->
+	
+	</script>
+	</body>
+</html>

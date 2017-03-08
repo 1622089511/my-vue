@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="mt1">
+			<p> message: "{{ message }}"</p>
+			<p> reversedMessage: "{{ reverseMessage  }} "</p>
+		</div>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:'#mt1',
+			data:{
+				message:'hello,vue'
+			},
+			/*methods:{
+				reverseMessage:function(){
+					return this.message.split('').reverse().join('')
+				}	
+			}	可以使用computed和methods
+			*/
+			computed:{
+				reverseMessage:function(){
+					return Date.now()
+				}
+			}
+			
+		})
+	/*两者不同:计算属性需要依赖缓存
+		  每当重新渲染methods	
+	*/	
+	</script>
+	</body>
+</html>

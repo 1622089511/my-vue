@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+			<div id="ex">
+				<!--勾子函数-->
+				<transition 
+					v-on:before-enter="beforeEnter"
+					v-on:enter="enter"
+					v-on:after-enter="beforeLeave"
+					v-on:enter-cancelled="leave"
+					
+					 v-on:before-leave="beforeLeave"
+  					 v-on:leave="leave"
+					 v-on:after-leave="afterLeave"
+					 v-on:leave-cancelled="leaveCancelled"
+					>
+				</transition>		
+			</div>		
+	<script src="../vue.js"></script>	
+	<script>
+		/*
+		methods:{
+			beforeEnter:function(el){
+				
+				},
+			enter: function (el, done) {
+		    	// ...
+		    done()			 JavaScript 过渡的时候， 在 enter 和 leave 中，
+		    							回调函数 done 是必须的. 否则，它们会被同步调用，过渡会立即完成。
+		    							
+		    	},
+		    afterEnter: function (el) {
+   			 	// ...
+  				},
+ 			 enterCancelled: function (el) {
+  				 // ...
+ 			 	},
+		}
+		*/
+	</script>
+	</body>
+</html>

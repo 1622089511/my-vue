@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--v-bind:class列表-->
+		<div id="v1" v-bind:class="[activeClass,errorClass]"></div>
+	
+		<div id="v2" v-bind:class="[isActive ? activeClass : '',errorClass]"></div>
+		
+		<!--多个条件-->
+		<div id="v3" v-bind:class="[{ active: isActive },errorClass]"></div>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		new Vue({
+			el: '#v1',
+			data:{
+				activeClass: 'active',
+				errorClass: 'error'
+			}		
+		})
+		
+		new Vue({
+			el: '#v2',
+			data:{
+				isActive:true,		//这里要进行判断，并且赋值
+				activeClass:'active',  //赋值
+			    errorClass: 'error'
+			}
+		})
+		
+		
+		new Vue({
+			el:'#v3',
+			data:{
+				isActive:true,    //对象法，前面是class名
+				errorClass: 'error'
+			}
+		})
+	</script>
+	</body>
+</html>

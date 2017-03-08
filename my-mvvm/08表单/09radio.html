@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<div id="ex">
+		
+		<input type="radio"
+			v-model="pick"
+			v-bind:value= "a"
+			 />
+		<input type="radio" v-model="pick" v-bind:value="b" />
+		<pre>{{ pick  }}</pre>
+	</div>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		new Vue({
+			
+			el: '#ex',
+			data:{
+				pick:'',
+				a:'a',
+				b:'b'
+			}
+			
+			
+		})
+		
+		
+	</script>
+	
+	
+</body>
+</html>

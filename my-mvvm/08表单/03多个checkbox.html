@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="example">
+			
+			<input type="checkbox" id="jack" value="Jack" v-model="checkedName" />
+					<label for="jack">jack</label>
+			<input type="checkbox" id="john" value="John" v-model= "checkedName" />
+					<label for="john">John</label>
+			<input type="checkbox" id="mike" value="Mike"  v-model= "checkedName" />
+					<label for="mike">Mike</label>			
+			<span>CheckName:{{  checkedName | json  }}</span>	
+		</div>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+			new Vue ({
+				el: '#example',
+				data:{
+					checkedName :  [ ] 
+				}
+				
+				
+			})
+		
+		
+	</script>
+	</body>
+</html>

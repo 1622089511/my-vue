@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="password" />	
+		<h1 v-show="false">hello</h1>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		document.getElementsByTagName('input')[0].on=function(e){
+			e.preventDefault();
+		}
+		
+	</script>
+	</body>
+</html>

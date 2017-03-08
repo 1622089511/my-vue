@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	
+	<ul id="ex-1">
+		<li v-for="item in items">
+				{{ item.message  }}
+		</li>
+	</ul>
+	
+	<ul id="ex-2">
+		<li v-for="(item,index) in items">
+			{{	parentMessage }} - {{index}} - {{item.message}}	
+		</li>	
+	</ul>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Vue({
+			el : '#ex-1',
+			data:{
+				items:[
+					{message: 'Foo'},
+					{message: 'Bar'}
+				]
+			}			
+		})
+		new Vue({
+			el:'#ex-2',
+			data:{
+				parentMessage: 'Parent',
+				items:[
+					{ message: 'foo' },
+					{ message: 'bar' }
+				]
+			}
+		})
+		
+	</script>
+	
+	
+</body>
+</html>

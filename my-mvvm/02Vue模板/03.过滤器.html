@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		{{ message | capitalize}}
+	<!--在vue2.x中，过滤器只能在mustache绑定中使用。为了指令绑定，应该计算属性-->						
+	过滤器函数接受表达式的值作为第一个参数	
+		new Vue({
+			filters:{
+				capitalize:function(){
+				if(!value) return ''
+					value = value.toString()				
+					return value.charAt(0).toUpperCase+value.splice(1)	
+				}
+			}
+		})
+	过滤器的串联
+		{{message | filterA | filterB}}
+	过滤器是js函数，所以可以接收参数
+		{{message | filterA('arg1','arg2')}}
+	arg1代表第2个参数，arg2表达式的值被求值然后传入过滤器作为第3个参数*	
+			
+		
+		
+	</body>
+</html>

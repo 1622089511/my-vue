@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ex">
+			<input  type="checkbox"
+					v-model="toggle"
+					v-bind:true-value="a"		
+					v-bind:false-value="b"
+			/>				<!-- 常用v-bind:true/false-valu -->
+			<pre>{{ toggle |json }}</pre>	
+		</div>
+		
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el:'#ex',
+			data:{
+				toggle: '',
+				a: 'blue',
+				b: 'xiaowang'
+			}
+			
+			
+		})
+		
+		
+		
+	</script>
+	</body>
+</html>

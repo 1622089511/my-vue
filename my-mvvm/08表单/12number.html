@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ex">
+			<!--将数据转换为number格式-->
+			<input type="text" v-model.number="msg"  /> {{msg}}
+			<br />
+			<input type="text" v-model.number="msg2"  /> {{msg2}}
+			<br />
+			{{ $data | json}}
+		</div>
+		
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		new Vue({
+			el: '#ex',
+			data:{
+				msg:'',
+				msg2:''
+			}
+			
+			
+		})
+		
+	</script>
+	</body>
+</html>

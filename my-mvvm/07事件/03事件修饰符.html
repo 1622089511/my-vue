@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ex4">
+			<!--阻止事件冒泡-->
+			<a v-on:click.stop="doThis">a</a>
+			<!--提交表单但不重载页面-->
+			<form v-on:click.submit.prevent="onSubmit">a</form>
+			<!--修饰符可以串联-->
+			<a v-on:click.stop.prevent="doThat">a</a>
+			
+			<!--只有修饰符-->
+			<form v-on:submit.prevent></form>
+			
+			<!--添加事件监听为捕获模式-->
+			<div v-on:click.capture="true"></div>
+			
+			<!--只有事件在元素本事才回调-->
+			<div v-on:click.self="doThat"></div>
+			
+			<!--新增触发一次-->
+			<div v-on:click.once="doThis"></div>
+ 			
+		</div>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		
+		
+		
+	</script>
+	</body>
+</html>

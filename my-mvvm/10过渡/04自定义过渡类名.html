@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<link href="https://unpkg.com/animate.css@3.5.1/animate.min.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+			<div id="ex">
+				<button @click="show = !show">toggle</button>
+				<transition
+					name="custom-classed-transition"				
+					enter-active-class="animated tada"
+					leave-active-class="animated bounceOutRight"
+				>	
+			<!--通过enter-active-class和leave-active-class与第三方库相结合-->
+					<p v-if="show">hello </p>
+				</transition>
+			
+			</div>
+		
+	<script src="../vue.js"></script>	
+	<script>
+			new Vue({
+				el: ' #ex ',
+				data: {
+					show : true	
+				}
+				
+				
+			})
+		
+	</script>
+	</body>
+</html>

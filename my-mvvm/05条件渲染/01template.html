@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<template v-if="ok">
+			<h1>Title</h1>
+			<p>Paragraph</p>
+			<p>Paragraph</p>	
+		</template>
+		
+		<div v-if="Math.random()>0.5">
+			Sorry
+		</div>
+		<div v-else>
+			Not sorry
+		</div>
+		<!--新增2.1 v-else-if-->
+		<div v-if=" type=== 'A'">
+			A
+		</div>
+		<div v-else-if=" type === 'B'">
+			B
+		</div>		
+		<div v-else-if=" type === 'c' ">
+			C
+		</div>		
+		<div v-else>
+			Not A/B/C
+		</div>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		
+		
+		
+		
+		
+		
+		
+	</script>
+	</body>
+</html>

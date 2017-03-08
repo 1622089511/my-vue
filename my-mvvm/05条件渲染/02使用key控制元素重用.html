@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<template v-if="loginType === 'username'">
+			<label>Username</label>
+			<input placeholder="Enter your username" />
+		</template>	
+		
+		<template v-else>
+			<label> Email </label>
+			<input placeholder="Enter your email" />
+		</template>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		//在代码中切换 loginType 不会删除用户已经输入的内容，
+		//两个模版由于使用了相同的元素，<input> 会被复用，仅仅是替换了他们的 placeholder。
+		
+	</script>
+	</body>
+</html>

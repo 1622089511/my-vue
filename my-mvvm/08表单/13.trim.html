@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- .trim会删掉首尾空格  -->
+		<div id="ex">
+			<input  v-model.trim="msg" />	{{ msg }}
+			<input  v-model="msg2" />	{{ msg2 }}		
+			<br />
+			{{ $data | json}}
+		</div>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		new Vue({		
+			el:'#ex',
+			data:{
+				msg:'',
+				msg2:''
+				
+			}			
+		})
+		
+		
+	</script>
+	</body>
+</html>

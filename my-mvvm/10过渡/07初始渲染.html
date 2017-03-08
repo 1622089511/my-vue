@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--初始化渲染-->
+		<transition appear>
+			<!---->
+		</transition>
+			
+		<!--例子-->
+		<transition
+			appear
+			appear-class="custom-appear-class"
+			appear-active-class="custom-appear-active-class">		
+		</transition>
+		<!--自定义勾子-->
+			<transition
+				  appear
+				  v-on:before-appear="customBeforeAppearHook"
+				  v-on:appear="customAppearHook"
+				  v-on:after-appear="customAfterAppearHook"
+			>
+				 <!-- ... -->
+			</transition>
+	<script src="../vue.js"></script>	
+	<script>
+		
+		
+		
+	</script>
+	</body>
+</html>

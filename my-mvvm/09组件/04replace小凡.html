@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="replace" class="foo lol come">a</div>
+		<div id="insert" class="foo">b</div>
+		<script src="../vue.js"></script>
+		<script>
+			var vm = new Vue({
+				el: '#replace',
+				template: '<p class="bar">replace</p>'
+			})
+			var vm2 = new Vue({
+					el: '#insert',
+					replace: false, //Vue 2已经移出
+					template: '<div class="foo"><p class="bar">insert</p></div>'
+				})
+				//解决方法：1.将它包裹起来 或者 2.使用渲染函数
+		</script>
+	</body>
+
+</html>

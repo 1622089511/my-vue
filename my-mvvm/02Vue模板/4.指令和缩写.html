@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	1.参数	
+		<a v-bind:href="url"></a>
+		v-bind：响应地更新HTML属性
+		
+		v-on:用来监听DOM事件
+		<a href="#" v-on:click="dosomething"></a>
+	2.修饰符	
+		<a href="#" v-on:click.prevent="onsubmit"></a>
+		
+	3.v-bind:  v-on:缩写
+		<a v-bind:href="url"></a>
+	  缩写v-bind:
+	  	<a :href="url"></a>
+		
+	 缩写v-on:
+	 	<a href="#" @click="onsubmit"></a>
+	 	
+	 	
+	</body>
+</html>

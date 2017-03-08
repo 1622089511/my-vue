@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ex">
+			<simple-counter></simple-counter>
+			<simple-counter></simple-counter>
+			<simple-counter></simple-counter>
+		</div>
+	<script src="../vue.js"></script>	
+	<script>
+		var data ={ counter : 0 } ;
+		Vue.component('simple-counter',{
+			template:	'<button v-on:click="counter += 100">{{ counter }}</button> ',	
+			data:function(){
+											//return data;				所有组件共享data
+				return {
+					counter : 0 	//这样可以通过每个组件返回新的data对象来解决问题
+				};
+			}
+		})
+	
+		new Vue({
+			el: '#ex'
+		})
+		
+		
+	</script>
+	</body>
+</html>

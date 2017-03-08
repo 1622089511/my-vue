@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="example">
+			
+		</div>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		
+		var data={a:1}
+		var vm = new Vue({
+			el: '#example',
+			data:data
+		})
+		
+		console.log(vm.$el); //document.getElementById('example');
+		console.log(vm.$data); //data
+		console.log(vm.$data == data);
+		
+		vm.$watch('a',function(newVal,oldVal){  //不要用箭头函数绑定上下文
+			
+		})
+	</script>
+	</body>
+</html>

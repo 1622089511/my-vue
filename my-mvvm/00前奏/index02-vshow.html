@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.error{
+				color:red;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<form action="#">
+				<div class="error" v-show="!message">空字符不能提交</div>
+				<textarea v-model="message"></textarea>
+				<button v-show="message"> send message</button>
+			</form>
+			<pre>{{ $data|json }}</pre>
+		</div>
+		
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Vue({
+			el : '#app',
+			data : {
+				message:''
+			}
+			
+		})
+		
+	</script>
+	</body>
+</html>

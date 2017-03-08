@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="el">
+			
+			<input type="checkbox" 
+					v-model="checked"
+					v-bind:true-value="a"
+					v-bind:false-value="b"
+				/>
+			<pre>{{  checked | json  }}</pre>
+			
+		</div>
+		
+	</body>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		new Vue({
+			
+			el : '#el',
+			data: {
+				checked: '',
+				a:'true',
+				b: 'false'
+				
+				
+			}
+			
+			
+		})
+		
+		
+	</script>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="example">
+			<p>Original message:"{{ message }}"</p>
+			<p>Computed reversed message:"{{ reversedMessage }}"</p>		
+		</div>
+		
+		<div id="example2">
+			<p>m1:" {{ message2 }}  "</p>
+			<p>m2:" {{ toGetMessage }} "</p>
+		</div>
+	
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		
+		var vm = new Vue({		
+			el:'#example',
+			data:{
+				message: 'hello'
+			},
+			computed:{
+				reversedMessage: function(){
+					return this.message.split('').reverse().join('')
+				}
+			}			
+		})
+		
+		var vm2 = new Vue({
+			el:'#example2',
+			data:{
+				message2:'come on'
+			},
+			computed:{
+				toGetMessage : function(){
+					return this.message2.split(' ').reverse().join('');
+				}
+			}
+			
+		})
+		
+		console.log(vm.reversedMessage);
+		vm.message = 'dubay';
+		console.log(vm.reversedMessage)
+	</script>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<template v-if="loginType === 'username'">
+  			<label>Username</label>
+  			<input placeholder="Enter your username" key="username-input">
+		</template>
+		
+		<template v-else>
+  			<label>Email</label>
+  			<input placeholder="Enter your email address" key="email-input">
+		</template>
+		<!--key是唯一值，每次切换时会重新渲染-->
+	</body>
+</html>

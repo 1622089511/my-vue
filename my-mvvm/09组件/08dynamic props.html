@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>dynamic</title>
+	</head>
+	<body>
+		<div id="app">
+			<input v-model="parentMsg" /><br />
+			<child v-bind:my-message="parentMsg"></child>	<br />
+			<child :my-message="parentMsg"></child>
+		</div>
+	
+		
+	<script src="../vue.js"></script>	
+	<script>
+		  Vue.component('child',{
+		  			props: ['myMessage'],
+					template: '<span>{{myMessage}}</span>'
+			})
+		new Vue({
+			 		el:	'#app',
+			 		data:{
+			 			parentMsg: '台湾小凡'
+			 		}
+			 })
+		
+	</script>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ex2">
+				<span>Mutiline Message is:</span>
+				<p style="white-space: pre;">{{message}}</p>
+				<textarea  v-model="message" placeholder="add multiple lines"></textarea>
+		</div>
+		
+	
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+			new Vue({
+				el : '#ex2',
+				data:{
+					message: 'as',
+				}
+			})
+			
+		
+		
+		
+	</script>
+		
+	</body>
+</html>

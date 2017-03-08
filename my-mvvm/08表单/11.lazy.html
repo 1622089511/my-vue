@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>	
+		<div id="ex">
+			<!--.lazy在blur后触发-->
+			<input  v-model.lazy="msg"  />{{msg}}
+			<br />
+			<input v-model="msg1" />{{msg1}}
+		</div>
+		
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		new Vue({
+			el: '#ex',
+			data:{
+				msg:'',
+				msg1:''
+			}
+			
+		})
+		
+		
+		
+	</script>
+	</body>
+</html>

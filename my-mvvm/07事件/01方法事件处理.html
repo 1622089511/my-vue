@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+			<div id="ex2">
+				<button v-on:click="greet">Greet</button>
+			</div>
+		
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+			new Vue({
+				
+				el: '#ex2',
+				data:{
+					name: 'vue.js'
+				},
+				methods:{
+					greet: function(event){
+						alert('hello '+this.name + '!')
+						alert(event.target.tagName)
+					}
+				}
+				
+				
+			})
+		
+	</script>
+	</body>
+</html>

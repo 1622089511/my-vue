@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="ex">
+			<input type="text" v-model.debounce="message"  /> 
+			{{message}}
+			
+		</div>
+	<script src="../vue.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		new Vue({
+			el : '#ex',
+			data:{
+				message: ' '
+			}
+			
+			
+		})
+		
+		
+	</script>
+	</body>
+</html>
